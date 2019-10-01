@@ -20,12 +20,12 @@ class Square:
             self.__size = size
 
     def area(self):
-        """Calculates a square area object.
+        """Method to calculate a square area object.
 
         Args:
-            size: Square size must be integer and equals or greater than zero.
+            self: The object itself.
 
         Returns:
-            An area of a square.
+            The area of a square.
         """
-        return self._size ** 2
+        return (self.__size ** 2)
