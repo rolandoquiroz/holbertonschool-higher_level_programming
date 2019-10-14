@@ -1,37 +1,36 @@
-5. Text indentation
-===========================
-Function
-========.
-Function that prints a text with 2 new lines after each
-of these characters: ., ? and :.
+The ``5-text_indentation`` module
+============================
 
-Operations
-==========
-There should be no space at the beginning or at the end of each printed line
-You are not allowed to import any module
+Using ``text_indentation``
+---------------------
 
-Import module:
+This is a text file in reStructuredText format.
+It contains a test for the text_indentation function in the 5-text_indentation module.
+First import ``text_indentation`` from the ``5-text_indentation`` module:
+
+
+    Test 00 Open 2-text_indentation
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Uses:
+Now test:
 
-    Test 1: Returns a string
+    Test 01: Returns a string
     >>> text_indentation("hi")
     hi
 
-    Test 2: Error input is not a string
+    Test 02: Error input is not a string
     >>> text_indentation(666)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
 
-    Test 3: No input
+    Test 03: No input
     >>> text_indentation()
     Traceback (most recent call last):
     ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-    Test 4: Returns string with blank line:
+    Test 04: Returns string with blank line:
     >>> text_indentation("Hi. Dude!")
     Hi.
     <BLANKLINE>
