@@ -45,7 +45,7 @@ Now test:
     >>> matrix_divided(matrix2, 69)
     Traceback (most recent call last):
     ...
-    TypeError: matrix must be a matrix (array of arrays of integers/floats)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
     Test 07: div is not a number
     >>> matrix_divided(matrix, "69")
