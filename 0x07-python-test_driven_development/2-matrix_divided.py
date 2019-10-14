@@ -16,35 +16,32 @@ def matrix_divided(matrix, div):
     Returns:
         A matrix with te result of division.
     """
-        err = 'matrix must be a matrix (list of lists) of integers/floats'
-    if type(matrix) is not list:
+    err = 'matrix must be a matrix (list of lists) of integers/floats'
+
+    if (type(matrix) != list):
         raise TypeError(err)
-    for row in matrix:
-        if type(row) is not list:
+    for r in matrix:
+        if (type(r) != list):
             raise TypeError(err)
 
-    # make sure div is not 0
-    if div == 0:
+    if (div == 0):
         raise ZeroDivisionError('division by zero')
-    if type(div) is not int and type(div) is not float:
+    if ((type(div) != int) and (type(div) != float)):
         raise TypeError('div must be a number')
 
-    # make sure each element is an int or float
-    for row in matrix:
-        for elem in row:
-            if type(elem) is not int and type(elem) is not float:
+    for r in matrix:
+        for e in r:
+            if ((type(e) != int) and (type(e) != float)):
                 raise TypeError(err)
 
-    # make sure all rows are the same size
-    length_of_rows = []
-    for row in matrix:
-        length_of_rows.append(len(row))
-    length_of_rows = set(length_of_rows)
-    if len(length_of_rows) > 1:
-        raise TypeError('Each row of the matrix must have the same size')
+    length_of_rs = []
+    for r in matrix:
+        length_of_rs.append(len(r))
+    length_of_rs = set(length_of_rs)
+    if len(length_of_rs) > 1:
+        raise TypeError('Each r of the matrix must have the same size')
 
-    # finally, do the division and return the new matrix
     new_matrix = []
-    for row in matrix:
-        new_matrix.append([round((x/div), 2) for x in row])
+    for r in matrix:
+        new_matrix.append([round((x/div), 2) for x in r])
     return new_matrix
