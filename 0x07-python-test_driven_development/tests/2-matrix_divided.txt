@@ -75,12 +75,7 @@ Now test:
     ...
     TypeError: TypeError: matrix_divided() missing 1 required positional argument: 'div' 
 
-    Test 12: First argument: No integer or float
-    >>> matrix_divided("Something")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-    Test 13: matrix has a float('inf') element and div is float('inf')
+    Test 12: matrix has a float('inf') element and div is float('inf')
+    >>> matrix4 = [666, [float('inf')], [13, 69]]
     >>> matrix_divided(matrix3, float(inf))
-    [[nan, 0.0], [0.0, 0.0]]
+    [[0.0, nan], [0.0, 0.0]]
