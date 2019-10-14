@@ -8,8 +8,8 @@ This is a text file in reStructuredText format.
 It contains a test for the matrix_divided function in the 0-matrix_divided module.
 First import ``matrix_divided`` from the ``0-matrix_divided`` module:
 
-    Test 00 Open 0-matrix_divided
-    >>> matrix_divided = __import__('0-matrix_divided').matrix_divided
+    Test 00 Open 2-matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now test:
 
