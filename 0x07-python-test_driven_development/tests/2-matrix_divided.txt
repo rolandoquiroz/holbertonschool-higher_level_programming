@@ -54,7 +54,8 @@ Now test:
     TypeError: div must be a number
 
     Test 08: div is a infinite float
-    >>> matrix_divided(matrix, float('inf'))
+    >>> matrix0 = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix0, float('inf')))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
     Test 09: matrix has a float('inf') element
@@ -72,7 +73,7 @@ Now test:
     >>> matrix_divided(matrix, )
     Traceback (most recent call last):
     ...
-    TypeError: matrix_divided() missing 2nd required positional arguments: 'div'
+    TypeError: TypeError: matrix_divided() missing 1 required positional argument: 'div' 
 
     Test 12: First argument: No integer or float
     >>> matrix_divided("Something")
