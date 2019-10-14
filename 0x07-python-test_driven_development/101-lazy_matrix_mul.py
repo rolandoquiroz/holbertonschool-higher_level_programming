@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-"""
-multiplies two matrices
-"""
-
 import numpy
 """
-This module contains useful linear algebra operations
+Module to multiply matrix
+
 """
 
 
 def lazy_matrix_mul(m_a, m_b):
-    """multiplies two matrices"""
-    return numpy.matmul(m_a, m_b)
+    """
+    Method to multiplies two matrix
+
+    """
+    try:
+        ans = numpy.matmul(m_a, m_b)
+    except:
+        raise
+    return ans
+
