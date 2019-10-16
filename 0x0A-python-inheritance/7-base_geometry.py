@@ -8,13 +8,13 @@ exception when required
 
 
 class BaseGeometry:
-    """ BaseGeometry class """
+    """ Class BaseGeometry """
     def area(self):
         """ raises not implemented exception """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ raise error if value is not a strictly positive integer"""
+        """ raise error if value is not a strictly positive integer """
         if type(value) is not int:
             raise TypeError("{:s} must be an integer".format(name))
         if value <= 0:
