@@ -17,5 +17,5 @@ def number_of_lines(filename=""):
         The number of lines of a text file.
 
     """
-    with open(filename, mode="r", encoding="utf-8") as a_file:
-        return (len(list(a_file)))
+    with open(filename, mode="r", encoding="utf-8") as f:
+        return (len(list(f)))
