@@ -134,3 +134,53 @@ class Base:
                     tmp[key] = int(value)
                 obj_list.append(cls.create(**tmp))
         return (obj_list)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Opens a window and draws all the Rectangles and Squares
+
+        """
+        def draw_rectangles(ninja_turtle, list_rectanles, colours):
+            """
+            This methods draws rectangles
+
+            """
+            for r, colour in zip(list_rectangles, colours):
+                ninja_turtle.setpos(0, 0)
+                ninja_turtle.setpos(r.x, r.y)
+                ninja_turtle.pencolor(colour)
+                ninja_turtle.pendown()
+                ninja_turtle.forward(r.width)
+                ninja_turtle.left(90)
+                ninja_turtle.forward(r.height)
+                ninja_turtle.left(90)
+                ninja_turtle.forward(r.width)
+                ninja_turtle.left(90)
+                ninja_turtle.forward(r.height)
+                ninja_turtle.left(90)
+                ninja_turtle.penup()
+            ninja_turtle.hideturtle()
+
+        def draw_squares(ninja_turtle, list_squares, colours):
+            """
+            This method draws squares
+            """
+            for s, colour in zip(list_squares, colours):
+                ninja_turtle.setpos(0, 0)
+                ninja_turtle.setpos(s.x, s.y)
+                ninja_turtle.pencolor(colour)
+                ninja_turtle.pendown()
+                for i in range(4):
+                    ninja_turtle.forward(s.size)
+                    ninja_turtle.left(90)
+                ninja_turtle.penup()
+            ninja_turtle.hideturtle()
+
+        Leonardo = turtle.Turtle()
+        colours = ['red', 'green', 'blue']
+        draw_rectangles(Leonardo, list_rectangles, colours)
+
+        Donatello = turtle.Turtle()
+        colours = ['yellow', 'cyan', 'magenta']
+        draw_squares(Donatello, list_squares, colours)
