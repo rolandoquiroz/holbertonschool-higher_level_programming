@@ -142,47 +142,34 @@ class Base:
         Opens a window and draws all the Rectangles and Squares
 
         """
-        def draw_rectangles(ninja_turtle, list_rectanles, colours):
-            """
-            This methods draws rectangles of random colours
-
-            """
-            for r in list_rectangles:
-                ninja_turtle.setpos(0, 0)
-                ninja_turtle.setpos(r.x, r.y)
-                ninja_turtle.pencolor(random.choice(colours))
-                ninja_turtle.pendown()
-                ninja_turtle.forward(r.width)
-                ninja_turtle.left(90)
-                ninja_turtle.forward(r.height)
-                ninja_turtle.left(90)
-                ninja_turtle.forward(r.width)
-                ninja_turtle.left(90)
-                ninja_turtle.forward(r.height)
-                ninja_turtle.left(90)
-                ninja_turtle.penup()
-            ninja_turtle.hideturtle()
-
-        def draw_squares(ninja_turtle, list_squares, colours):
-            """
-            This method draws squares of random colours
-
-            """
-            for s in list_squares:
-                ninja_turtle.setpos(0, 0)
-                ninja_turtle.setpos(s.x, s.y)
-                ninja_turtle.pencolor(random.choice(colours))
-                ninja_turtle.pendown()
-                for i in range(4):
-                    ninja_turtle.forward(s.size)
-                    ninja_turtle.left(90)
-                ninja_turtle.penup()
-            ninja_turtle.hideturtle()
-
         colours = ['red', 'green', 'blue', 'yellow', 'cyan', 'magenta']
+        ninja_turtle = turtle.Turtle()
 
-        Leonardo = turtle.Turtle()
-        draw_rectangles(Leonardo, list_rectangles, colours)
+        for r in list_rectangles:
+            ninja_turtle.setpos(r.x, r.y)
+            ninja_turtle.pencolor(random.choice(colours))
+            ninja_turtle.pendown()
+            ninja_turtle.showturtle()
+            ninja_turtle.forward(r.width)
+            ninja_turtle.left(90)
+            ninja_turtle.forward(r.height)
+            ninja_turtle.left(90)
+            ninja_turtle.forward(r.width)
+            ninja_turtle.left(90)
+            ninja_turtle.forward(r.height)
+            ninja_turtle.left(90)
+            ninja_turtle.hideturtle()
+            ninja_turtle.penup()
+        ninja_turtle.setpos(0, 0)
 
-        Donatello = turtle.Turtle()
-        draw_squares(Donatello, list_squares, colours)
+        for s in list_squares:
+            ninja_turtle.setpos(s.x, s.y)
+            ninja_turtle.pencolor(random.choice(colours))
+            ninja_turtle.pendown()
+            ninja_turtle.showturtle()
+            for i in range(4):
+                ninja_turtle.forward(s.size)
+                ninja_turtle.left(90)
+            ninja_turtle.hideturtle()
+            ninja_turtle.penup()
+        ninja_turtle.setpos(0, 0)
