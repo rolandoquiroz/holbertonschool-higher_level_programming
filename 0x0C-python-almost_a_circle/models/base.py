@@ -143,13 +143,13 @@ class Base:
         """
         def draw_rectangles(ninja_turtle, list_rectanles, colours):
             """
-            This methods draws rectangles
+            This methods draws rectangles of random colours
 
             """
-            for r, colour in zip(list_rectangles, colours):
+            for r in list_rectangles:
                 ninja_turtle.setpos(0, 0)
                 ninja_turtle.setpos(r.x, r.y)
-                ninja_turtle.pencolor(colour)
+                ninja_turtle.pencolor(random.choice(colours))
                 ninja_turtle.pendown()
                 ninja_turtle.forward(r.width)
                 ninja_turtle.left(90)
@@ -164,12 +164,12 @@ class Base:
 
         def draw_squares(ninja_turtle, list_squares, colours):
             """
-            This method draws squares
+            This method draws squares of random colours
             """
-            for s, colour in zip(list_squares, colours):
+            for s in list_squares:
                 ninja_turtle.setpos(0, 0)
                 ninja_turtle.setpos(s.x, s.y)
-                ninja_turtle.pencolor(colour)
+                ninja_turtle.pencolor(random.choice(colours))
                 ninja_turtle.pendown()
                 for i in range(4):
                     ninja_turtle.forward(s.size)
@@ -177,10 +177,10 @@ class Base:
                 ninja_turtle.penup()
             ninja_turtle.hideturtle()
 
+        colours = ['red', 'green', 'blue', 'yellow', 'cyan', 'magenta']
+
         Leonardo = turtle.Turtle()
-        colours = ['red', 'green', 'blue']
         draw_rectangles(Leonardo, list_rectangles, colours)
 
         Donatello = turtle.Turtle()
-        colours = ['yellow', 'cyan', 'magenta']
         draw_squares(Donatello, list_squares, colours)
