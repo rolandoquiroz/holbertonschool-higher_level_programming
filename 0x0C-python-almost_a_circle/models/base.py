@@ -8,6 +8,7 @@ import csv
 import turtle
 import random
 
+
 class Base:
     """
     class Base
@@ -165,6 +166,7 @@ class Base:
         def draw_squares(ninja_turtle, list_squares, colours):
             """
             This method draws squares of random colours
+
             """
             for s in list_squares:
                 ninja_turtle.setpos(0, 0)
