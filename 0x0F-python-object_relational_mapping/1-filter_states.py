@@ -29,7 +29,7 @@ if __name__ == "__main__":
     Use all the SQL you like
     """
     cursor.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id"
     )
     """
     Obtaining Query Results
