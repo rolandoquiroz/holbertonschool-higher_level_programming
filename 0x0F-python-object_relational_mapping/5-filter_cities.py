@@ -39,10 +39,10 @@ if __name__ == "__main__":
     """
     cities = cursor.fetchall()
 
-    for i, row in enumerate(cities):
+    for i, city in enumerate(cities):
         if i:
             print(', ', end='')
-        print(row[1], end='')
+        print(city[1], end='')
     print()
     """
     Clean Up
