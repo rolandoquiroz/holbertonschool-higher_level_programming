@@ -1,20 +1,15 @@
 #!/usr/bin/python3
-"""
-Definition for a state class and an instance Base
-"""
+"""python file containing the class definition of State and declarative base"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+
 Base = declarative_base()
-# returns a new base class from which all mapped
-# classes should inherit
 
 
 class State(Base):
-    """
-    class attribute id that represents a column, unique integer, can't be null
-    it's primary key
-    """
+    """State class inherits from Base"""
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    id = Column(Integer, primary_key=True, nullable=False, , autoincrement=T\
+     rue)
     name = Column(String(128), nullable=False)
