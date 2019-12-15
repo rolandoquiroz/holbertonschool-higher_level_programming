@@ -29,9 +29,9 @@ if __name__ == "__main__":
     Use all the SQL you like
     """
     cursor.execute(
-        "SELECT * FROM cities.id, cities.name \
+        "SELECT cities.id, cities.name \
         FROM states JOIN cities ON cities.state_id = states.id \
-        WHERE states.name=%(states.name)s \
+        WHERE states.name = %(states.name)s \
         ORDER BY cities.id", {'states.name': argv[4]}
     )
     """
@@ -39,8 +39,11 @@ if __name__ == "__main__":
     """
     cities = cursor.fetchall()
 
-    for city in cities:
-        print(city)
+    for i, row in enumerate(cities):
+        if i:
+            print(', ', end='')
+        print(row[1], end='',)
+    print()
     """
     Clean Up
     Close all cursors and databases
