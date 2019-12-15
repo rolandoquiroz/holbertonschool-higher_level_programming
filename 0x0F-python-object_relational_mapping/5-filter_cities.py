@@ -42,7 +42,7 @@ if __name__ == "__main__":
     for i, row in enumerate(cities):
         if i:
             print(', ', end='')
-        print(row[1], end='',)
+        print(row[1], end='')
     print()
     """
     Clean Up
