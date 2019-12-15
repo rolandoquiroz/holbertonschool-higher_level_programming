@@ -44,6 +44,7 @@ if __name__ == "__main__":
             print(', ', end='')
         print(city[1], end='')
     print()
+
     """
     Clean Up
     Close all cursors and databases
