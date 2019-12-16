@@ -10,7 +10,7 @@ if __name__ == "__main__":
     from sqlalchemy import create_engine
     from sqlalchemy.orm import Session
     from model_state import Base, State
-    from modrl_city import City
+    from model_city import City
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(argv[1], argv[2], argv[3]),
@@ -24,7 +24,7 @@ if __name__ == "__main__":
                     order_by(City.id))
 
     for city_object, state_object in city_objects:
-        print("{}: ({}) {}".format(state_object.name, city_object.name,
-                                   city_object.id))
+        print("{}: ({}) {}".format(state_object.name, city_object.id,
+                                   city_object.name))
 
     session.close()

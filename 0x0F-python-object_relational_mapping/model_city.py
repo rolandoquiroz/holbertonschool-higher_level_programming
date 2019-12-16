@@ -34,4 +34,4 @@ class City(Base):
     class attribute state_id that represents a column of an integer,
     can’t be null and is a foreign key to states.id
     """
-    state_id = Column(Integer, nullable=False, ForeignKey('states.id'))
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
