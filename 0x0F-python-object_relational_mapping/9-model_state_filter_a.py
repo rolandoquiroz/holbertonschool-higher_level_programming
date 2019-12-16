@@ -19,10 +19,11 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    state_obj_a_f = session.query(State).filter(
-        State.name.like('%a%')).order_by(State.id).all()
+    state_obj_a_f = session.query(State).order_by(
+        State.id).filter(State.name.like('%a%')).all()
 
-    for state_obj_a in state_obj_a_f:
-        print("{}: {}".format(state_obj_a.id, state_obj_a.name))
+    if state_obj_a_f:
+        for state_obj_a in state_obj_a_f:
+            print("{}: {}".format(state_obj_a.id, state_obj_a.name))
 
     session.close()
