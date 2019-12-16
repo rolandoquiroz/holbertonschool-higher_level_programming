@@ -20,10 +20,10 @@ if __name__ == "__main__":
     session = Session(engine)
 
     state_matches_name = session.query(State).filter(
-        argv[4] == State.name).first()
+        State.name == argv[4]).first()
 
     if state_matches_name:
-        print("{}".format(state.id))
+        print("{}".format(state_matches_name.id))
     else:
         print("Not found")
 
