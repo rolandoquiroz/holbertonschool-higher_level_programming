@@ -9,7 +9,7 @@ if __name__ == "__main__":
         """ this won't be run when imported """
         from sys import argv
         from urllib import request, parse
-        values = {'email' : argv[2]}
+        values = {'email': argv[2]}
         data = parse.urlencode(values)
         data = data.encode('utf-8')
         req = request.Request(argv[1], data)
