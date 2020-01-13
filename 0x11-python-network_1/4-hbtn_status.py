@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 """
-Describe me
+Python script that fetches
+https://intranet.hbtn.io/status
 """
 
 if __name__ == "__main__":
-	""" this won't be run when imported """
+        """ this won't be run when imported """
+        import requests
+        response = requests.get('https://intranet.hbtn.io/status')
+        print("Body response:")
+        print("\t- type: {}".format(type(response.headers['content-type'])))
+        print("\t- content: {}".format(response.text))
