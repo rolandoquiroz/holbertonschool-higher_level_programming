@@ -10,16 +10,16 @@ if __name__ == "__main__":
         from sys import argv
         from requests import post
         if len(argv) == 2:
-                data={'q': argv[1]}
+                data = {'q': argv[1]}
         else:
-                data={'q': ''}
-        try:
+                data = {'q': ''}
                 req = post('http://0:5000/search_user', data)
+        try:
                 response = req.json()
                 if response.status_code == 204:
                         print('No result')
                 else:
-                        print("[{}] {}".format(response['id'],
-                                               response['name']))
+                        print("[{}] {}".format(response.get('id'),
+                                               response.get('name')))
         except ValueError:
-                print('No a valid JSON')
+                print('Not a valid JSON')
