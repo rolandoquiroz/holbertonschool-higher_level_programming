@@ -16,7 +16,7 @@ if __name__ == "__main__":
         req = post('http://0:5000/search_user', data)
         try:
                 response = req.json()
-                if response.status_code == 204:
+                if not (response.keys()):
                         print('No result')
                 else:
                         print("[{}] {}".format(response.get('id'),
