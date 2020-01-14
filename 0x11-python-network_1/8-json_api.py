@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 data = {'q': argv[1]}
         else:
                 data = {'q': ''}
-                req = post('http://0:5000/search_user', data)
+        req = post('http://0:5000/search_user', data)
         try:
                 response = req.json()
                 if response.status_code == 204:
