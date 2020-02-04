@@ -1,3 +1,7 @@
 #!/usr/bin/node
-const myVar = 'Javascript is amazing';
-console.log(myVar);
+
+const myMessages = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+let i;
+for (i = 0; i < myMessages.length; i++) {
+  console.log(myMessages[i]);
+}
