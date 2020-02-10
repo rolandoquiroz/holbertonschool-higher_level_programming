@@ -5,10 +5,14 @@ module.exports = class Square extends require('./5-square')
     if (c === undefined)
     {
       c = "X";
+      this.print();
     }
+    else
+    {
     let i;
     for (i = 0; i < this.height; i++) {
       console.log(c.repeat(this.width));
+    }
     }
   }
 }
