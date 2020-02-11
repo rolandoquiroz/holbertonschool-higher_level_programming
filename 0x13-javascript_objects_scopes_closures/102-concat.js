@@ -4,7 +4,7 @@ let content1;
 let content2;
 if (process.argv[2] && process.argv[3] && process.argv[4]) {
   content1 = fs.readFileSync(process.argv[2], 'utf8');
-  fs.appendFile(process.argv[4], content1 + '\n', function (err) { if (err) throw err; });
+  fs.appendFile(process.argv[4], content1, function (err) { if (err) throw err; });
   content2 = fs.readFileSync(process.argv[3], 'utf8');
-  fs.appendFile(process.argv[4], content2 + '\n', function (err) { if (err) throw err; });
+  fs.appendFile(process.argv[4], content2, function (err) { if (err) throw err; });
 }
