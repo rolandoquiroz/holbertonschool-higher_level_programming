@@ -5,9 +5,5 @@ if (process.argv[2] && process.argv[3] && process.argv[4]) {
 
   const contents2 = fs.readFileSync(process.argv[3], 'utf8');
 
-  fs.appendFile(process.argv[4], contents1 + '\n' + contents2, (err) => {
-    if (err) {
-
-    }
-  });
+  fs.appendFile(process.argv[4], contents1 + '\n' + contents2, function (err) { if (err) throw err; });
 }
