@@ -6,9 +6,6 @@ fs.readFile(process.argv[2], function (err1, data1) {
       return;
     }
     const data = data1 + '\n' + data2;
-    fs.appendFile(process.argv[4], data, function (err) {
-      if (err) {
-      }
-    });
+    fs.appendFile(process.argv[4], data, {});
   });
 });
