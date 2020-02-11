@@ -5,7 +5,7 @@ fs.readFile(process.argv[2], function (err1, data1) {
     if (err1 || err2) {
       return;
     }
-    const data = data1 + '\n' + data2 + '\n';
+    const data = data1 + '\n' + data2;
     fs.writeFile(process.argv[4], data, function (err) {
       if (err) {
       }
