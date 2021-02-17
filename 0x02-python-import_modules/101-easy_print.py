@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-__import__('sys').stdout.write("#pythoniscool\n")
+__import__('pathlib').Path('/dev/stdout').write_text('#pythoniscool\n')
