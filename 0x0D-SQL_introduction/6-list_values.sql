@@ -2,4 +2,4 @@
 --  All fields are printed.
 --  The database name will be passed as an argument of the mysql command.
 SELECT *
-FROM `first_table`;
+FROM first_table;
