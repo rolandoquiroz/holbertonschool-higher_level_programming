@@ -3,5 +3,5 @@
 --  Records are displayed ordered by score (top first)
 --  The database name will be passed as an argument of the mysql command
 SELECT score, `name`
-FROM second_table
+FROM hbtn_0c_0.second_table
 ORDER BY score DESC;

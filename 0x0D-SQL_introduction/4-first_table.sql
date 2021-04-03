@@ -5,7 +5,7 @@
 -- The database name will be passed as an argument of the mysql command.
 -- If the table first_table already exists, this script does not fail.
 -- The SELECT or SHOW statements are not allowed.
-CREATE TABLE IF NOT EXISTS first_table (
+CREATE TABLE IF NOT EXISTS hbtn_0c_0.first_table (
     id INT,
     `name` VARCHAR(256)
     );
