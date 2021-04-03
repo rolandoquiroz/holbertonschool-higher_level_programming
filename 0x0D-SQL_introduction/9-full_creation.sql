@@ -11,11 +11,11 @@
 --  id = 2, name = “Alex”, score = 3
 --  id = 3, name = “Bob”, score = 14
 --  id = 4, name = “George”, score = 8
-CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
+CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     `name` VARCHAR(256),
     score INT);
-INSERT INTO hbtn_0c_0.second_table (id, `name`, score)
+INSERT INTO second_table (id, `name`, score)
 VALUES
     (1, 'John', 10),
     (2, 'Alex', 3),
