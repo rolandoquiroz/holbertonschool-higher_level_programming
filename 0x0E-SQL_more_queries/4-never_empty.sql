@@ -5,6 +5,6 @@
 -- The database name will be passed as an argument of the mysql command
 -- If the table id_not_null already exists, this script does not fail
 CREATE TABLE IF NOT EXISTS id_not_null(
-    id_not_null NOT NULL DEFAULT 1,
+    id_not_null DEFAULT 1,
     `name` VARCHAR(256)
 );
