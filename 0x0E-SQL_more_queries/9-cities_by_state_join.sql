@@ -3,7 +3,19 @@
 -- Results must be sorted in ascending order by cities.id
 -- You can use only one SELECT statement
 -- The database name will be passed as an argument of the mysql command
+-- Left Join solution
+-- SELECT cities.id, cities.name, states.name
+-- FROM cities
+-- LEFT JOIN states ON cities.state_id = states.id
+-- ORDER BY cities.id ASC;
+-- Theta style Cartesian product solution as a Natural join: cities.state_id = states.id = id
+-- SELECT cities.id, cities.`name`, states.`name`
+-- FROM cities, states
+-- WHERE cities.state_id = states.id
+-- ORDER BY cities.id ASC;
+-- Solution ANSI style: ON 
 SELECT cities.id, cities.`name`, states.`name`
-FROM cities, states
-WHERE cities.state_id = states.id
+FROM cities
+JOIN states
+ON cities.state_id = states.id
 ORDER BY cities.id ASC;
