@@ -4,6 +4,6 @@
 -- You are not allowed to use the JOIN keyword
 -- The database name will be passed as an argument of the mysql command
 SELECT cities.id, cities.name
-FROM hbtn_0d_usa.states, hbtn_0d_usa.cities
-WHERE hbtn_0d_usa.states.`name` = 'California'
+FROM hbtn_0d_usa.cities
+WHERE hbtn_0d_usa.cities.state_id = 1
 ORDER BY cities.id ASC;
