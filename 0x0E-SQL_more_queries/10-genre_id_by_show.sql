@@ -1,5 +1,5 @@
--- Import the database dump from hbtn_0d_tvshows to your MySQL server
 -- Script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
+-- Import the database dump from hbtn_0d_tvshows to your MySQL server
 --  Each record displays: tv_shows.title - tv_show_genres.genre_id
 --  Results are sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 --  You can use only one SELECT statement
