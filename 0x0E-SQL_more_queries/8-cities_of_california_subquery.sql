@@ -11,7 +11,7 @@
 -- 	 FROM states
 --	 WHERE `name` = 'California')
 -- ORDER BY id ASC;
--- Cartesian product solution:
+-- Theta Join style solution: Projection(Selection(Cartesian product)):
 SELECT cities.id, cities.`name`
 FROM cities, states
 WHERE cities.state_id = 1 AND states.`name` = 'California' 

@@ -7,12 +7,12 @@
 -- Theta Join style solution: Projection(Selection(Cartesian product)):
 -- SELECT tv_shows.title, tv_show_genres.genre_id
 -- FROM tv_shows, tv_show_genres
--- WHERE (tv_shows.id = tv_show_genres.show_id) AND tv_show_genres.genre_id >= 1
+-- WHERE tv_show_genres.genre_id >= 1
 -- ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
 -- ANSI style solution: 
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
-JOIN tv_show_genres
+INNER JOIN tv_show_genres
 ON tv_shows.id = tv_show_genres.show_id
 WHERE tv_show_genres.genre_id >= 1
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
