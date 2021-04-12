@@ -7,7 +7,7 @@
 -- The database name will be passed as an argument of the mysql command
 SELECT tv_shows.title
 FROM tv_shows
-WHERE tv_shows.id NOT IN --MINUS
+WHERE tv_shows.id NOT IN -- MINUS
 (SELECT tv_show_genres.show_id
 FROM tv_show_genres
 INNER JOIN tv_genres
