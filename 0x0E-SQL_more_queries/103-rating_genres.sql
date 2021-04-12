@@ -16,6 +16,6 @@ SELECT tv_genres.`name`, SUM(tv_show_ratings.rate) AS rating
 FROM tv_show_ratings
 NATURAL JOIN tv_show_genres
 INNER JOIN tv_genres
-ON id = genre_id
+ON genre_id = tv_genres.id
 GROUP BY tv_genres.`name`
 ORDER BY rating DESC;
