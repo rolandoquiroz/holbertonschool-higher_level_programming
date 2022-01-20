@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import math
 "doc"
+import math
 
 
 class MagicClass:
