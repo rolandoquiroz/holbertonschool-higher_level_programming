@@ -4,4 +4,4 @@ def new_in_list(my_list, idx, element):
         my_list_copied = my_list[:]
         my_list_copied[idx] = element
         return (my_list_copied)
-    return (my_list)
+    return my_list
