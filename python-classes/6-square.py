@@ -16,6 +16,7 @@ my_print: Print the square.
 Properties
 ----------
 size: Retrieve or set the size of the square.
+position: Retrieve or set the position of the square.
 """
 
 
@@ -23,7 +24,8 @@ class Square:
     """
     Defines a square.
 
-    This class can be used to create square objects with a specific size.
+    This class can be used to create square objects
+    with a specific size and position.
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -34,14 +36,20 @@ class Square:
         ----------
         size : int, optional
             The size of each side of the square.
+        position : tuple of 2 positive integers, optional
+            The position of the square.
 
         Attributes
         ----------
         size : int
             The size of each side of the square. Default is 0.
+        position : tuple of 2 positive integers
+            The position of the square. Default is (0, 0).
 
+        Notes
         -----
-        If size is not provided, the default value is 0.
+        If size or position are not provided,
+        the default values are 0 for size and (0, 0) for position.
         """
         self.__size = size
         self.__position = position
@@ -88,27 +96,26 @@ class Square:
 
         Returns
         -------
-        int
-            The size of the square.
+        tuple
+            The position of the square.
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        Set the size of the square.
+        Set the position of the square.
 
         Parameters
         ----------
-        value : int
-            The new size value.
+        value : tuple
+            The new position value.
 
         Raises
         ------
         TypeError
-            If value is not an integer.
-        ValueError
-            If value is less than 0.
+            If value is not a tuple or not of length 2
+            or not containing positive integers.
         """
         if not isinstance(value, tuple) or len(value) != 2 or\
            not all(isinstance(i, int) and i >= 0 for i in value):
@@ -131,6 +138,7 @@ class Square:
         Print the square using the character #.
 
         If size is equal to 0, an empty line is printed.
+        The position is taken into account when printing the square.
         """
         if self.__size == 0:
             print()
