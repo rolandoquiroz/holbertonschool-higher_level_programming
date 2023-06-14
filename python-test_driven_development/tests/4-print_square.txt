@@ -1,0 +1,75 @@
+The ``4-print_square`` module
+============================
+
+Using ``print_square``
+---------------------
+
+This is a text file in reStructuredText format.
+It contains a test for the print_square function in the 4-print_square module.
+First import ``print_square`` from the ``4-print_square`` module:
+
+    Test 00 Open 4-print_square
+    >>> print_square = __import__('4-print_square').print_square
+
+Now test:
+
+    Test 01: size: A positive integer
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+    Test 02: No arguments passed
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    Test 03: size: zero
+    >>> print_square(0)
+
+
+    Test 04: size: None
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    Test 05: Too many arguments
+    >>> print_square(13, 69)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+
+    Test 06: size: string
+    >>> print_square("7")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    Test 07: size: float
+    >>> print_square(666.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    Test 08: size: float
+    >>> print_square(666.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    Test 09: size: negative integer
+    >>> print_square(-13)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+    Test 10: size: no defined integer
+    >>> print_square(s)
+    Traceback (most recent call last):
+    ...
+    NameError: name 's' is not defined
