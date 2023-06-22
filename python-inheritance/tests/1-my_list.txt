@@ -19,16 +19,20 @@ Now test:
     >>> print(my_list)
     []
 
-    Test 02 - `append()`
+    Test 02 - `print_sorted()` with empty list
+    >>> my_list.print_sorted()
+    []
+
+    Test 03 - `append()`
     >>> my_list.append(666)
     >>> print(my_list)
     [666]
 
-    Test 03 - `print_sorted()` with sorted append
+    Test 04 - `print_sorted()` with sorted append
     >>> my_list.print_sorted()
     [666]
 
-    Test 04 - `print_sorted()` with negative number
+    Test 05 - `print_sorted()` with negative number
     >>> my_list.append(-1)
     >>> my_list.print_sorted()
     [-1, 666]
