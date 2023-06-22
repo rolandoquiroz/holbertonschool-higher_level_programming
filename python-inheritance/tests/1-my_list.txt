@@ -17,3 +17,4 @@ Now test:
     Test 01 Instantiation 
     >>> my_list = MyList()
     >>> print(my_list)
+    []
