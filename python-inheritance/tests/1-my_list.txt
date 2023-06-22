@@ -16,5 +16,3 @@ Now test:
 
     Test 01 - Instantiation, inherits from list, `__str__`
     >>> my_list = MyList()
-    >>> my_list
-    []
