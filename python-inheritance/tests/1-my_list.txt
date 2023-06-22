@@ -36,3 +36,10 @@ Now test:
     >>> my_list.append(-1)
     >>> my_list.print_sorted()
     [-1, 666]
+
+    Test 06 - `print_sorted()` returns a new list
+    >>> my_list.append(13)
+    >>> print(my_list)
+    [-1, 666, 13]
+    >>> my_list.print_sorted()
+    [-1, 13, 666]
