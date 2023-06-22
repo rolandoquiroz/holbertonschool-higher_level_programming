@@ -23,3 +23,7 @@ Now test:
     >>> my_list.append(666)
     >>> print(my_list)
     [666]
+
+    Test 03 - `print_sorted()` with sorted append
+    >>> my_list.print_sorted()
+    [666]
