@@ -21,4 +21,5 @@ Now test:
 
     Test 02 - `append()`
     >>> my_list.append(666)
+    >>> print(my_list)
     [666]
