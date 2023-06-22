@@ -1,13 +1,10 @@
 Test class MyList from 1-my_list module
 ========================
 
-Using ``MyList``
-----------------
-
 Test the class by importing from the module and running it through a series of
 interactive tests.
 
-    Test 00 Import class MyList from 1-my_list module
+    Test 00 - Import class `MyList` from 1-my_list module
     >>> MyList = __import__('1-my_list').MyList
 
 Now test:
