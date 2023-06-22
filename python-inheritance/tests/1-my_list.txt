@@ -1,12 +1,10 @@
-# 1-my_list.txt
-
-The ``1-my_list`` module
+Test class MyList from 1-my_list module
 ========================
 
 Using ``MyList``
 ----------------
 
-Test the module by importing the class and running it through a series of
+Test the class by importing from the module and running it through a series of
 interactive tests.
 
     Test 00 Import class MyList from 1-my_list module
