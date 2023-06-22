@@ -27,3 +27,8 @@ Now test:
     Test 03 - `print_sorted()` with sorted append
     >>> my_list.print_sorted()
     [666]
+
+    Test 04 - `print_sorted()` with negative number
+    >>> my_list.append(-1)
+    >>> my_list.print_sorted()
+    [-1 666]
