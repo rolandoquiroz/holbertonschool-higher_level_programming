@@ -14,7 +14,11 @@ interactive tests.
 
 Now test:
 
-    Test 01 Instantiation 
+    Test 01 - Instantiation, inherits from list, `__str__`
     >>> my_list = MyList()
     >>> print(my_list)
     []
+
+    Test 02 - `append()`
+    >>> my_list.append(666)
+    [666]
