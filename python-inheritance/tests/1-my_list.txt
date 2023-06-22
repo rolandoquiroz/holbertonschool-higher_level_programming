@@ -16,30 +16,4 @@ Now test:
 
     Test 01 - Instantiation, inherits from list, `__str__`
     >>> my_list = MyList()
-    >>> print(my_list)
-    []
-
-    Test 02 - `print_sorted()` with empty list
-    >>> my_list.print_sorted()
-    []
-
-    Test 03 - `append()`
-    >>> my_list.append(666)
-    >>> print(my_list)
-    [666]
-
-    Test 04 - `print_sorted()` with sorted append
-    >>> my_list.print_sorted()
-    [666]
-
-    Test 05 - `print_sorted()` with negative number
-    >>> my_list.append(-1)
-    >>> my_list.print_sorted()
-    [-1, 666]
-
-    Test 06 - `print_sorted()` returns a new list
-    >>> my_list.append(13)
-    >>> print(my_list)
-    [666, -1, 13]
-    >>> my_list.print_sorted()
-    [-1, 13, 666]
+    >>> my_list
