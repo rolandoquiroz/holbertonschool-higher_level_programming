@@ -23,7 +23,7 @@ Now test:
     >>> my_list.print_sorted()
     []
 
-    Test 03 - `append()`
+    Test 03 - `append()`, `print_sorted()` with sorted append
     >>> my_list.append(666)
     >>> my_list.print_sorted()
     [666]
@@ -34,8 +34,7 @@ Now test:
     [-1, 666]
 
     Test 05 - `print_sorted()` returns a new list
-    >>> my_list.append(13)
-    >>> print(my_list)
-    [666, -1, 13]
+    >>> my_list
+    [666, -1]
     >>> my_list.print_sorted()
-    [-1, 13, 666]
+    [-1, 666]
