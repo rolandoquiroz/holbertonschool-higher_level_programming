@@ -1,0 +1,144 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This is a text file in reStructuredText format.
+It contains a test for the add_integer function in the 0-add_integer module.
+First import ``add_integer`` from the ``0-add_integer`` module:
+
+    Test 00 Open 0-add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now test:
+
+    Test 01: Two positive integers passed
+    >>> add_integer(6, 7)
+    13
+
+    Test 02: Two positive floats passed
+    >>> add_integer(35.0, 34.0)
+    69
+
+    Test 03: First argument positive integer, second argument positive float
+    >>> add_integer(665, 1.87)
+    666
+
+    Test 04: First argument positive float, second argument positive integer
+    >>> add_integer(1.21, 9)
+    10
+
+    Test 05: First argument negative integer, second argument float
+    >>> add_integer(-10, 10.3)
+    0
+
+    Test 06: First argument positive float, second negative float
+    >>> add_integer(75.7, -9.3)
+    66
+
+    Test 07: First argument negative float, second negative float
+    >>> add_integer(-1.7, -2.3)
+    -3
+
+    Test 07: First argument integer zero, second integer zero
+    >>> add_integer(0, 0)
+    0
+
+    Test 08: One argument passed: Positive integer
+    >>> add_integer(2)
+    100
+
+    Test 09: One argument passed: Negative float
+    >>> add_integer(-98.9)
+    0
+
+    Test 10: First argument: No argument
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    Test 11: Second argument: No argument
+    >>> add_integer(13, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Test 12: First argument: No integer or float
+    >>> add_integer("Something")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    Test 13: Second argument: No integer or float
+    >>> add_integer(13, "Something")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Test 14: First argument: Integer not defined
+    >>> add_integer(n, 666)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'n' is not defined
+
+    Test 15: Second argument: Integer not defined
+    >>> add_integer(123, n)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'n' is not defined
+
+    Test 16: First argument: List as argument
+    >>> add_integer([3,2])
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    Test 17: Second argument: List as argument
+    >>> add_integer(69, [3,2])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Test 18: Too many arguments
+    >>> add_integer(13, 69, 666)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    Test 19: First argument: inf
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test 20: First argument: -inf
+    >>> add_integer(-float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test 21: Second argument: inf
+    >>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test 22: Second argument: -inf
+    >>> add_integer(5, -float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test 23: First argument: NaN
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+    Test 24: Second argument: NaN
+    >>> add_integer(69, -float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
