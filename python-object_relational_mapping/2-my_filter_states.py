@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Python script that takes in an argument and displays all values
-in the states table of hbtn_0e_0_usa where name matches the argument
+in the states table of hbtn_0e_0_usa database where name matches the argument
 """
 
 if __name__ == "__main__":
