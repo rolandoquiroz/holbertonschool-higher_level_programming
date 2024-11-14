@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Python script that takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa database where name matches the argument.
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     from sys import argv
     import MySQLdb
 
-    db = MySQLdb.connect(x
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=argv[1],
@@ -22,8 +22,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
 
-    sql = "SELECT * FROM states WHERE name= BINARY %s ORDER BY id ASC;"
-    args = (argv[4])
+    sql = "SELECT * FROM states WHERE name = BINARY %s ORDER BY id ASC;"
+    args = (argv[4],)
+
     cur.execute(sql, args)
 
     states = cur.fetchall()
