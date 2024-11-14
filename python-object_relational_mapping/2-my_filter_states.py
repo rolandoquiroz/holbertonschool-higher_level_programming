@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     cur.execute("SELECT * FROM states \
                  WHERE name = '{name:s}' \
-                 ORDER BY id ASC".format(name=argv[4]))
+                 ORDER BY id ASC;".format(name=argv[4]))
 
     states = cur.fetchall()
 
