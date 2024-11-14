@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ Python script that list all states from table hbtn_0e_0_usa.states """
 
 if __name__ == "__main__":
