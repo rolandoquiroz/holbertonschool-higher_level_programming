@@ -21,7 +21,6 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-
     sql = "SELECT * FROM states WHERE name = BINARY %s ORDER BY id ASC;"
     args = (argv[4],)
 
