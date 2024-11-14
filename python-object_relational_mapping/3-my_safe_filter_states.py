@@ -2,7 +2,7 @@
 """
 Python script that takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa database where name matches the argument.
-But this time, it is safe from MySQL injections!
+But this time, write one that is safe from MySQL injections!
 """
 
 if __name__ == "__main__":
