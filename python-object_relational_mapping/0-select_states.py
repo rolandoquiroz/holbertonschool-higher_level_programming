@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-""" Python script that list all states from table states
-from database hbtn_0e_0_usa """
+"""
+Python script that list all states from table states
+from database hbtn_0e_0_usa
+"""
 
 if __name__ == "__main__":
     """ This code won't be run when imported """
