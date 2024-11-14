@@ -21,11 +21,10 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute(
-        "SELECT * FROM states \
-        WHERE BINARY name=%(name)s \
-        ORDER BY id ASC;", {'name': argv[4]}
-    )
+
+    sql = "SELECT * FROM states WHERE name= BINARY %s ORDER BY id ASC;"
+    args = (argv[4])
+    cur.execute(sql, args)
 
     states = cur.fetchall()
 
