@@ -18,14 +18,14 @@ if __name__ == "__main__":
         database=argv[3]
     )
 
-    cursor = db.cursor()
+    cur = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id;")
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
 
-    states = cursor.fetchall()
+    states = cur.fetchall()
 
     for _ in states:
         print(_)
 
-    cursor.close()
+    cur.close()
     db.close()
