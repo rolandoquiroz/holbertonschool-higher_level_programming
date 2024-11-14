@@ -2,7 +2,7 @@
 """ Python script that list all states from table hbtn_0e_0_usa.states """
 
 if __name__ == "__main__":
-    """This code won't be run when imported"""
+    """ This code won't be run when imported """
 
     from sys import argv
     import MySQLdb
