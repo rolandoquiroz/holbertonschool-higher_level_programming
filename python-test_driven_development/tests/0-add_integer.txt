@@ -38,6 +38,10 @@ Now use it:
     ValueError: cannot convert float NaN to integer
 
     Test: missing one argument
+    >>> add_integer(1)
+    99
+
+    Test: missing one argument
     >>> add_integer()
     Traceback (most recent call last):
     ...
