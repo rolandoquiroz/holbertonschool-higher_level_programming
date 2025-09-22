@@ -18,3 +18,9 @@ Now use it:
     Test: integer casting
     >>> add_integer(1.2, 2.5)
     3
+
+    Test: check type
+    >>> add_integer(1, "2")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
