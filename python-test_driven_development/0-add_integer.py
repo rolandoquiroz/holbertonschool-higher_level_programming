@@ -20,3 +20,5 @@ def add_integer(a, b=98):
     Raises:
         TypeError: If either `a` or `b` is not an integer or float.
     """
+    return a + b
+    
