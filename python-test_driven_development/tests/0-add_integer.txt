@@ -41,7 +41,7 @@ Now use it:
     >>> add_integer(1)
     99
 
-    Test: missing one argument
+    Test: missing two arguments
     >>> add_integer()
     Traceback (most recent call last):
     ...
